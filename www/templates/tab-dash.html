@@ -1,5 +1,86 @@
 <ion-view view-title="首页">
   <ion-content class="padding">
+    <style>
+      .ImgList {
+        width: 100%;
+        height: 420px;
+        position: absolute;/*绝对定位*/
+        left: 0px;
+        top: 0px;
+        z-index: -1;/*z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。*/
+      }
 
+      .button {
+        height: 20px;
+        position: absolute;
+        right:50%;
+        bottom: 20px;
+        z-index: 3;
+        display: inline-block; /*行内块级元素*/
+      }
+      .button li {
+        list-style-type: none;
+        width:20px;
+        height:10px;
+        float: left;
+        margin: 0px 5px;
+      }
+      .button li a{
+        text-decoration: none;
+        font-size: 30px;
+        color: indianred;/*未选中状态颜色*/
+      }
+
+      .button li .hover{
+        color:lime;/*设置选中状态为白色*/
+      }
+    </style>
+
+    <div id= "container">
+      <p class="ImgList" style="background:url('../img/1.jpg') center"></p>
+      <p class="ImgList" style="background:url('../img/2.jpg') center"></p>
+      <p class="ImgList" style="background:url('../img/3.jpg') center"></p>
+      <p class="ImgList" style="background:url('../img/4.jpg') center"></p>
+      <p class="ImgList" style="background:url('../img/5.jpg') center"></p>
+      <p class="ImgList" style="background:url('../img/9.jpg') center"></p>
+      <!--轮播的按扭-->
+      <ul class="button">
+        <li><a class="hover" href="javascript:void(0);">●</a></li>
+        <li><a href="javascript:void(0);">●</a></li>
+        <li><a href="javascript:void(0);">●</a></li>
+        <li><a href="javascript:void(0);">●</a></li>
+        <li><a href="javascript:void(0);">●</a></li>
+        <li><a href="javascript:void(0);">●</a></li>
+      </ul>
+    </div>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+    <script>
+      var _index=0;
+      var timePlay=null;
+      $("#container .ImgList").eq(0).show().siblings("div").hide();//只显示第一张
+
+      $("ul.button li").click(function(){
+        clearInterval(timePlay);
+        _index=$(this).index();
+        $("ul.button li .hover").removeClass('hover');
+        $(this).find('a').addClass("hover");
+        $("#container .ImgList").eq(_index).fadeIn().siblings("p").fadeOut();//淡出
+        autoPlay();
+      });
+      //自动轮播
+      function autoPlay(){
+        timePlay=setInterval(function(){
+          _index++;
+          if(_index<6){
+            if(_index==5){_index=-1; }
+            $("ul.button li .hover").removeClass('hover');
+            $("ul.button li").eq(_index).find('a').addClass("hover");
+            $("#container .ImgList").eq(_index).fadeIn().siblings("p").fadeOut();
+          }else{_index=-1;}
+        },2000);
+      };
+      autoPlay();//调用和执行
+    </script>
   </ion-content>
 </ion-view>
