@@ -77,7 +77,61 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'AccountCtrl'
       }
     }
-  });
+  })
+    .state('tab.serve', {
+      url: '/serve/:serve',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/tab-serve.html',
+          controller: 'ServeCtrl'
+        }
+      }
+    })
+    // .state('tab.func-int', {
+    //   url: '/func-int/:int',
+    //   views: {
+    //     'tab-aboutours': {
+    //       templateUrl: 'templates/tab-func-int.html',
+    //       controller: 'FuncCtrl'
+    //     }
+    //   }
+    // })
+    .state('tab.aboutours', {
+      url: '/aboutours/:aboutours',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/tab-aboutours.html',
+          controller: 'AboutoursCtrl'
+        }
+      }
+    })
+    .state('tab.myset', {
+      url: '/myset/:myset',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/tab-myset.html',
+          controller: 'MysetCtrl'
+        }
+      }
+    })
+    .state('tab.myhistory', {
+      url: '/myhistory/:myhis',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/tab-myhistory.html',
+          controller: 'MyhistoryCtrl'
+        }
+      }
+    })
+  .state('tab.myshoppingcar', {
+      url: '/myshoppingcar/:mysc',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/tab-myshoppingcar.html',
+          controller: 'MyshoppingCarCtrl'
+        }
+      }
+    });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
