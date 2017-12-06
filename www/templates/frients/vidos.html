@@ -17,6 +17,30 @@
       <video src="http://www.youname.com/images/123456.mp4" style="width: 100%;height: 20%;" controls="controls"></video>
       <ion-item ng-repeat="p in products" href="#">
 
+        <img ng-src="{{p.porster}}" style="width: 120px;height: 80px;vertical-align: bottom;" controls="controls">
+        <div style="display: inline-block;">
+          <h2>{{p.name}}</h2>
+          <p>{{p.desc}}</p>
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <h4>流行钢琴</h4>
+      <video src="http://www.youname.com/images/123456.mp4" style="width: 100%;height: 20%;" controls="controls"></video>
+      <ion-item ng-repeat="p in pdio" href="#">
+
+        <img ng-src="{{p.porster}}" style="width: 120px;height: 80px;vertical-align: bottom;">
+        <div style="display: inline-block;">
+          <h2>{{p.name}}</h2>
+          <p>{{p.desc}}</p>
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <h4>小提琴</h4>
+      <video src="http://www.youname.com/images/123456.mp4" style="width: 100%;height: 20%;" controls="controls"></video>
+      <ion-item ng-repeat="p in head" href="#">
+
         <img ng-src="{{p.porster}}" style="width: 120px;height: 80px;vertical-align: bottom;">
         <div style="display: inline-block;">
           <h2>{{p.name}}</h2>
