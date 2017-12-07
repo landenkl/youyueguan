@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['shop.controllers'])
 
 .controller('DashCtrl', function($scope) {})
 
@@ -8,12 +8,6 @@ angular.module('starter.controllers', [])
     Chats.remove(chat);
   };
 })
-
-  .controller('FrientsCtrl', function($scope) {
-    $scope.settings = {
-
-    };
-  })
   .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
     $scope.chat = Chats.get($stateParams.chatId);
   })
@@ -24,7 +18,7 @@ angular.module('starter.controllers', [])
     };
   })
 .controller('FrientsCtrl', function($scope) {
-  $scope.settings = {
+     $scope.settings = {
 
   };
 });
