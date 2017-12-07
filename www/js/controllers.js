@@ -1,4 +1,5 @@
-angular.module('starter.controllers', ['shop.controllers'])
+angular.module('starter.controllers', ['frients.controllers','shop.controllers'])
+
 
 .controller('DashCtrl', function($scope) {})
 
@@ -8,10 +9,10 @@ angular.module('starter.controllers', ['shop.controllers'])
     Chats.remove(chat);
   };
 })
-  .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-    $scope.chat = Chats.get($stateParams.chatId);
-  })
 
+.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+  $scope.chat = Chats.get($stateParams.chatId);
+})
   .controller('AccountCtrl', function($scope) {
     $scope.settings = {
       enableFriends: true
