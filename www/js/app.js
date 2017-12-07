@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter',['ionic','starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -33,22 +33,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // setup an abstract state for the tabs directive
     .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
-  })
+      url: '/tab',
+      abstract: true,
+      templateUrl: 'templates/tabs.html'
 
-  // Each tab has its own nav history stack:
+    })
 
-  .state('tab.dash', {
-    url: '/dash',
-    views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+    // Each tab has its own nav history stack:
+
+    .state('tab.dash', {
+      url: '/dash',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/tab-dash.html',
+          controller: 'DashCtrl'
+        }
       }
-    }
-  })
+    })
 
     .state('tab.chats', {
       url: '/chats',
@@ -67,71 +68,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'FrientsCtrl'
         }
       }
-    })
-
-    .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
-      }
-    }
-  })
-    .state('tab.serve', {
-      url: '/serve/:serve',
-      views: {
-        'tab-account': {
-          templateUrl: 'templates/tab-serve.html',
-          controller: 'ServeCtrl'
-        }
-      }
-    })
-    // .state('tab.func-int', {
-    //   url: '/func-int/:int',
-    //   views: {
-    //     'tab-aboutours': {
-    //       templateUrl: 'templates/tab-func-int.html',
-    //       controller: 'FuncCtrl'
-    //     }
-    //   }
-    // })
-    .state('tab.aboutours', {
-      url: '/aboutours/:aboutours',
-      views: {
-        'tab-account': {
-          templateUrl: 'templates/tab-aboutours.html',
-          controller: 'AboutoursCtrl'
-        }
-      }
-    })
-    .state('tab.myset', {
-      url: '/myset/:myset',
-      views: {
-        'tab-account': {
-          templateUrl: 'templates/tab-myset.html',
-          controller: 'MysetCtrl'
-        }
-      }
-    })
-    .state('tab.myhistory', {
-      url: '/myhistory/:myhis',
-      views: {
-        'tab-account': {
-          templateUrl: 'templates/tab-myhistory.html',
-          controller: 'MyhistoryCtrl'
-        }
-      }
-    })
-  .state('tab.myshoppingcar', {
-      url: '/myshoppingcar/:mysc',
-      views: {
-        'tab-account': {
-          templateUrl: 'templates/tab-myshoppingcar.html',
-          controller: 'MyshoppingCarCtrl'
-        }
-      }
     });
+
+
+
+
+
+
+
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/dash');
