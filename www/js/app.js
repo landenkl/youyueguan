@@ -52,6 +52,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','l
 
       .state('tab.chats', {
         url: '/chats',
+        abstract: true,
         views: {
           'tab-chats': {
             templateUrl: 'templates/tab-shopping.html',
