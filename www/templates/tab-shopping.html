@@ -1,53 +1,17 @@
 <ion-view view-title="全部商品">
   <ion-content>
-    <style>
-      .shop-banner img{
-        width: 100%;
-      }
-      .shop-nav {
-        text-align: center;
-        margin-top:10px;
-        margin-bottom:12px;
-      }
-      .shop-nav a{
-        padding:5px 10px;
-        color: #0a9dc7;
-        font-size: 20px;
-      }
-      .shop-show {
-        margin:15px auto 15px;
-      }
-      .shop-show h3{
-        text-align: center;
-        color: #0a9dc7;
-      }
-      .shop-one>img{
-        width: 30%;
-      }
-    </style>
+    <!--自适应屏幕-->
+    <!--<script src="./js/public.js"></script>-->
     <div class="shop-nav">
-      <a href="" class="">古琴</a>
-      <a href="" class="">钢琴</a>
-      <a href="" class="">提琴</a>
+      <a href="#/tab/guqin" class="">古琴</a>
+      <a href="#/tab/gangqin" class="">钢琴</a>
+      <a href="#/tab/tiqin" class="">提琴</a>
     </div>
     <div class="shop-banner">
-      <a href="#">
-        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1512477162666&di=5d75207bd50796787678f02e303253d5&imgtype=0&src=http%3A%2F%2Fl.paipaitxt.com%2F118851%2F11%2F06%2F19%2F104_4864_718bb9209d8b383.png" alt="">
+      <a href="">
+        <img src="../img/qin1.jpg" alt="">
       </a>
     </div>
-    <div class="shop-show">
-      <h3>精选商品</h3>
-      <div class="shop-mokuai">
-        <h4>古琴</h4>
-        <div class="shop-one">
-          <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1512534437825&di=89bd713e605b012dcf2191d89200bf60&imgtype=0&src=http%3A%2F%2Fimg2.artron.net%2Fauction%2F2012%2Fart001953%2Fd%2Fart0019532058.jpg" alt="">
-          <br> <p class="shop-two"><span class="yuan">￥</span>886.00</p>
-          <p class="shop-three">优乐馆：:伏羲式优质桐木古琴 仲尼七弦琴 伏羲式 </p>
-          <p class="shop-four"><span>20+</span>条评论</p>
-          <button>立即购买</button><span class="shop-car"><span></span>添加购物车</span>
-        </div>
-      </div>
-    </div>
+    <ion-nav-view name="tab-shop-jingxuan"></ion-nav-view>
   </ion-content>
-
 </ion-view>

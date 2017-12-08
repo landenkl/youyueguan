@@ -1,0 +1,43 @@
+<ion-view view-title="个人设置">
+  <ion-content>
+    <ion-list>
+      <div class="item range">
+        <i class="icon ion-volume-low"></i>
+        <input type="range" name="volume">
+        <i class="icon ion-volume-high"></i>
+      </div>
+
+      <div class="list">
+        <div class="item range range-positive">
+          <i class="icon ion-ios-sunny-outline"></i>
+          <input type="range" name="volume" min="0" max="100" value="33">
+          <i class="icon ion-ios-sunny"></i>
+        </div>
+      </div>
+      <ul class="list">
+
+        <li class="item item-toggle">
+          仅在WI-FI状态下浏览视频
+          <label class="toggle">
+            <input type="checkbox">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+
+        <li class="item item-toggle">
+          自动保存足迹
+          <label class="toggle">
+            <input type="checkbox">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+
+
+      </ul>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,99 @@
+
+.shop-banner img{
+  width: 100%;
+}
+.shop-nav {
+  text-align: center;
+  margin-top:15px;
+  margin-bottom:12px;
+}
+.shop-nav a{
+  padding:5px 10px;
+  color: #0a9dc7;
+  font-size: 20px;
+}
+.shop-show {
+  margin:15px auto 65px;
+  /*height: 680px;*/
+}
+.shop-show h3{
+  text-align: center;
+  color: #0a9dc7;
+}
+.shop-show h4{
+  text-align: center;
+}
+.shop-til {
+  margin-top:20px;
+  margin-bottom:30px;
+}
+.shop-til>h4{
+  position: relative;
+  background-color: #fff;
+  width:140px;
+  font-size: 20px;
+  margin: 0 auto;
+}
+.shop-til>div {
+  border:2px solid darkgrey;
+  width: 80%;
+  margin: -10px auto 0;
+}
+/*古琴*/
+.tab-content1 {
+  width: 90%;
+  display: block;
+  margin:0 auto;
+}
+.tab-left img {
+  vertical-align: top;
+  width: 30%;
+  margin-left:10%;
+  border: 1px solid gray;
+}
+
+.tab-rightprice img{
+  width: 20px;
+  height: 20px;
+}
+
+.tab-left {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding:5% 0;
+}
+
+.tab-right {
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  margin-left:8%;
+}
+
+.tab-firstbox {
+  width: 100%;
+
+  border: 1px solid darkgrey;
+  margin: 0 auto;
+}
+
+.tab-rightheader {
+  color: #111111;
+  margin-bottom:8%;
+  font-weight: bolder;
+}
+
+.tab-rightprice {
+  font-weight: bolder;
+  margin-bottom:8%;
+  color: red;
+}
+
+.tab-rightshop {
+  margin-top: 5px;
+}
+
+.tab-rightshop span:last-child{
+  color: #0c60ee;
+}
