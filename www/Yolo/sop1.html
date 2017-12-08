@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html ng-app="ionicApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+  <title>淘购区</title>
+  <link href="https://cdn.bootcss.com/ionic/1.3.2/css/ionic.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://cdn.bootcss.com/ionic/1.3.2/js/ionic.bundle.min.js"></script>
+  <script src="../js/yu.js"></script>
+  <script type="text/javascript">
+    angular.module('ionicApp', ['ionic'])
+
+      .config(function($stateProvider, $urlRouterProvider) {
+
+        $stateProvider
+          .state('tabs', {
+            url: "/tab",
+            abstract: true,
+            templateUrl: "templates/tabs.html"
+          })
+          .state('tabs.home', {
+            url: "/home",
+            views: {
+              'home-tab': {
+                templateUrl: "templates/home.html",
+                controller: 'HomeTabCtrl'
+              }
+            }
+          })
+          .state('tabs.facts', {
+            url: "/facts",
+            views: {
+              'home-tab': {
+                templateUrl: "templates/facts.html"
+              }
+            }
+          })
+          .state('tabs.facts2', {
+            url: "/facts2",
+            views: {
+              'home-tab': {
+                templateUrl: "templates/facts2.html"
+              }
+            }
+          })
+          .state('tabs.about', {
+            url: "/about",
+            views: {
+              'about-tab': {
+                templateUrl: "templates/about.html"
+              }
+            }
+          })
+          .state('tabs.navstack', {
+            url: "/navstack",
+            views: {
+              'about-tab': {
+                templateUrl: "templates/nav-stack.html"
+              }
+            }
+          })
+          .state('tabs.contact', {
+            url: "/contact",
+            views: {
+              'contact-tab': {
+                templateUrl: "templates/contact.html"
+              }
+            }
+          });
+
+
+        $urlRouterProvider.otherwise("/tab/home");
+
+      })
+
+      .controller('HomeTabCtrl', function($scope) {
+        console.log('HomeTabCtrl');
+      });
+  </script>
+</head>
+
+<body>
+
+<ion-nav-bar class="bar-positive">
+  <ion-nav-back-button>
+  </ion-nav-back-button>
+</ion-nav-bar>
+
+<ion-nav-view></ion-nav-view>
+
+
+<script id="templates/tabs.html" type="text/ng-template">
+  <ion-tabs class="tabs-icon-top tabs-positive">
+
+    <ion-tab title="Home" icon="ion-home" href="#/tab/home">
+      <ion-nav-view name="home-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="About" icon="ion-ios-information" href="#/tab/about">
+      <ion-nav-view name="about-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Contact" icon="ion-ios-world" ui-sref="tabs.contact">
+      <ion-nav-view name="contact-tab"></ion-nav-view>
+    </ion-tab>
+
+  </ion-tabs>
+</script>
+
+
+<!--*****-->
+<script id="templates/home.html" type="text/ng-template">
+  <ion-view view-title="淘宝区">
+    <ion-content class="padding">
+      <div class="div1" style="margin-bottom: 130px;text-align: center">
+        <img src="../img/73.jpg" alt="" style="width:70%;">
+        <p style="font-size: 16px;margin: 40px 0 20px 0;">奈月古琴生漆古琴手工斫琴</p>
+        <span style="border:1px solid #6f00d2;font-size: 16px;">活动价</span>
+        <span style="font-size: 20px;color: red;margin: 0 30px 0 10px;">￥2089</span>
+        <span style="border:1px solid #6c6c6c;font-size: 16px;margin: 0 10px;">原价</span>
+        <span style="font-size: 18px;color: #6c6c6c;"><s>￥2359</s></span>
+
+        <div class="tao" style="text-align: left;margin:30px 0 0 15%;">
+          <p>商品信息 :</p>
+          <p>品牌:<span>奈乐</span></p>
+          <p>十三徽:<span>天然云母</span></p>
+          <p>材质:<span>优质老杉木</span></p>
+          <p>古琴尺长:<span>长123cm 宽22.5cm</span></p>
+          <p>琴胎:<span>生漆鹿角霜</span></p>
+          <p>琴弦:<span>特级乐圣定制弦</span></p></div>
+      </div>
+      <p>
+        <a class="button icon icon-right ion-chevron-right" href="#/tab/facts">Scientific Facts</a>
+      </p>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script id="templates/facts.html" type="text/ng-template">
+  <ion-view view-title="Facts">
+    <ion-content class="padding" style="line-height: 52px;font-size: 1em;text-indent: 40px;color: indianred;">
+      <p>众所周知，喜欢古琴的人大多数文化修养比较高，更有不少是文化艺术界的佼佼者。去琴社学琴，或是经常参加古琴雅集、讲座等活动，会让你更有
+        机会接触或认识这些有着书卷气的雅士们，迈出自己固有的的圈子，结识更多志同道合有趣的人，以古琴为媒介，谈书论画，闻香品茶，岂不快哉？</p>
+      <p>古琴，喜欢就能学会，入迷就能学好，发疯就能学精。提高自身的修养素质，自古，中国历代文人皆讲求“达则兼济天下，穷则独善其身”，每当文
+        人抑郁不得志之时，通常选择由儒入道，将关注点从纷攘的外界拉回到丰富的内心，逍遥隐逸，寄情山水，亲近广阔的大自然。抚琴作为修身养性的
+        方式之一，令历代文人雅士为之沉醉而解脱释怀。这正如嵇康在《琴赋》当中所言：“物有盛衰，而此（古琴）无变；滋味有猒，而此不勌，可以导养
+        神气，宣和情志，处穷独而不闷者，莫近于音声也。是故复之而不足，则吟咏以肆志，吟咏之不足，则寄言以广意”。</p>
+      <p>
+        <a class="button icon ion-home" href="#/tab/home"> Home</a>
+        <a class="button icon icon-right ion-chevron-right" href="#/tab/facts2" >了解更多</a>
+      </p>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script id="templates/facts2.html" type="text/ng-template">
+  <ion-view view-title="Also Factual">
+    <ion-content class="padding">
+      <p class="sop2-one"> 优势一：目的单纯成人学习古琴，大多是出于真正的个人兴趣。和被家长“威逼利诱”的孩子不同，成人的学习目的很简单，
+        不是专业十级、不是比赛第一，也不是考上音乐学院成为演奏大师，而仅仅是喜欢。而恰恰是这单纯的“喜欢”，让成人的学习变成了享受，从而也有
+        了发自内心的强大动力，更能弹好古琴。特别是在这愈渐功利的社会环境里，因为“喜欢”而去做一件事，本身就很了不起呢。</p>
+      <p class="sop2-one">优势二：手指条件好对，你没有看错。对于弹奏古琴来说，成人的手指条件的确有优势。这主要有两个原因，一是古琴音乐
+        绝大多数都比较中正平和，弹奏起来相对其他乐器来讲缓慢而稳健，因此不需要像古筝、琵琶一样，要求手指上有五年十年的“童子功”，成人经过一
+        段时间的充分练习，掌握指法技巧完全不是问题；二是因为古琴左手指法中有大量的按弦及“吟猱绰注”，对指力的要求比较高，成人相对于儿童来讲，
+        手指的力道更大，按弦、走弦时就要比小孩子容易许多（当然，弹琴不是使蛮力，光有力气不讲究技巧肯定不行）。</p>
+      <p class="sop2-one">优势三：文化素养高成人之于儿童，文化程度要高很多，尤其是在历史、文学及传统文化方面的理解也更为透彻，这些都对欣
+        赏与学习古琴有帮助。别的不说，刚接触古琴时，面对天书一般的减字谱，大部分成人很快就能自己发现其中的规律，而小孩子可能还需要一边学汉字
+        ，一边记减字。另外，古曲的创作年代非常久远，若是对当时的历史文化背景没有一定了解，也很难体会并演绎出琴曲中的意韵来，这一点上，成人也
+        是远胜于儿童的。</p>
+      <p class="sop2-one">优势四：理解力强此处的理解力，是指在学琴时，对于技巧、要领或乐理的理解归纳能力。儿童也许善于模仿动作，但成人的
+        优势在于总结归纳以及对抽象事物的理解。以乐理为例，虽然古琴学习所需要的音乐理论知识并不太多，但也避免不了一些概念的涉及，不少成年人通
+        过自学阅读，就能掌握简单的乐理基础，以节省课堂上的时间。但让小孩子自己理解抽象的乐理就行不通了，因此课堂上还需要老师花时间举例子耐心
+        讲解才行。</p>
+      <p class="sop2-one">优势五：时间充沛灵活相比于学业繁重的孩子，成人可支配的时间明显更多。虽说很多人的工作压力依然不小，但至少个人时
+        间的安排是可以由自己说了算的，不像广大中小学生，平时从早到晚忙着学习考试做题，周末还要补课及参加各种“兴趣班”，完全没有自主选择权。通
+        常来讲，成年人每周都有时间学琴，每天也有时间练琴，而对于退休的中老年人，则更是有着无比充沛的自由时间可以利用，简直是学习古琴的大好时光。</p>
+      <p class="sop2-one">优势六：更能吃苦要想学好一门乐器，吃不了苦是不行的，而成人在“吃苦”这项技能上，也完胜小朋友们。首先，就像前面说
+        的，成人学古琴多是自愿，出于喜爱而选择的事情，也更愿意为之付出。其次，成人心智成熟，完全明白“吃苦”与学好古琴呈正相关关系，不会像有些
+        小孩子们一样，想方设法偷懒逃避练琴。最后，成年人阅历丰富，耐受力强，练琴这点儿苦哪比得上饿肚子的苦，哪比得上高考的苦，哪比得上找不到工
+        作的苦呢？</p>
+      <p class="sop2-one">优势七：更能坚持你一定见过或听过这样的事：某某小朋友从小学习某种乐器，因为上初中/高中学业愈加繁忙，从此中断了学
+        习。这的确是一件很无奈和遗憾的事情，不过作为成年人，你就不用担心这个问题。大多数成人工作稳定，生活变动也比较少，下决心学习古琴后，都能
+        将其保持成毕生的爱好。即便迁居外地无法跟随以前的老师继续学琴，也可以随时把古琴拿出来练习，琴声不辍，更何况现在古琴社团、琴馆在各地呈欣
+        欣向荣之势，重新找到组织学习也不是难事。</p>
+      <p class="sop2-one">优势八:资金充裕这是一个很现实的问题，学习任何乐器都需要有一定的资金支持。成人，特别是30岁以上的收入稳定的成年人，
+        相比于青少年，甚至是大学生，在物质条件方面都有很大的优势。有钱当然不一定就能学好琴，但较为可靠的经济基础，的确能够使学琴的平台和起点更高
+        一些。比如，能够负担起学习效果更好、更有效率的一对一的课时费，能够拥有一张质量、音色上乘的古琴，能够到各地去欣赏古琴大师们的音乐会……当然，
+        现在不少孩子的家长也愿意为子女一掷千金，但花父母的钱和花自己的钱相比，哪一个更有底气呢？</p>
+      <p class="sop2-one"> 优势九：在快节奏的城市里，现代人的工作、家庭生活都不甚轻松，昏天黑地的“忙忙忙”带来的可能是精神焦虑，也可能是身体
+        异常。这时候，在慢节奏的古琴音乐中放松一下，是一个缓解都市压力的好办法。每天给自己一点只属于你和古琴的时间，管他什么老板客户，什么指标业
+        务，你且不紧不慢地，勾三挑五，吟猱绰注。（注意，弹古琴可以修身养性，但不能治病，身体精神出现问题还是要去医院就医。）</p>
+
+      <a class="button icon ion-home" href="#/tab/home"> Home</a>
+      <a class="button icon ion-chevron-left" href="#/tab/facts">返回上一页</a>
+      </p>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script id="templates/about.html" type="text/ng-template">
+  <ion-view view-title="About">
+    <ion-content class="padding">
+      <h3>Create hybrid mobile apps with the web technologies you love.</h3>
+      <p>Free and open source, Ionic offers a library of mobile-optimized HTML, CSS and JS components for building highly interactive apps.</p>
+      <p>Built with Sass and optimized for AngularJS.</p>
+      <p>
+        <a class="button icon icon-right ion-chevron-right" href="#/tab/navstack">Tabs Nav Stack</a>
+      </p>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script id="templates/nav-stack.html" type="text/ng-template">
+  <ion-view view-title="Tab Nav Stack">
+    <ion-content class="padding">
+      <p><img src="http://ionicframework.com/img/diagrams/tabs-nav-stack.png" style="width:100%"></p>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script id="templates/contact.html" type="text/ng-template">
+  <ion-view title="Contact">
+    <ion-content>
+      <div class="list">
+        <div class="item">
+          @IonicFramework
+        </div>
+        <div class="item">
+          @DriftyTeam
+        </div>
+      </div>
+    </ion-content>
+  </ion-view>
+</script>
+
+</body>
+</html>

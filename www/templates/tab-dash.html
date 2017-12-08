@@ -1,86 +1,104 @@
 <ion-view view-title="首页">
   <ion-content class="padding">
     <style>
-      .ImgList {
+      .box{
         width: 100%;
-        height: 420px;
-        position: absolute;/*绝对定位*/
-        left: 0px;
-        top: 0px;
-        z-index: -1;/*z-index 属性设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。*/
+        height: 220px;
       }
-
-      .button {
-        height: 20px;
-        position: absolute;
-        right:50%;
-        bottom: 20px;
-        z-index: 3;
-        display: inline-block; /*行内块级元素*/
+      .box a{
+        display: block;
+        position:relative;
+        top:50%;
+        transform:translateY(-50%);
       }
-      .button li {
-        list-style-type: none;
-        width:20px;
-        height:10px;
-        float: left;
-        margin: 0px 5px;
-      }
-      .button li a{
-        text-decoration: none;
-        font-size: 30px;
-        color: indianred;/*未选中状态颜色*/
-      }
-
-      .button li .hover{
-        color:lime;/*设置选中状态为白色*/
+      .box img{
+        width: 100%;
+        height:100%;
       }
     </style>
 
-    <div id= "container">
-      <p class="ImgList" style="background:url('../img/1.jpg') center"></p>
-      <p class="ImgList" style="background:url('../img/2.jpg') center"></p>
-      <p class="ImgList" style="background:url('../img/3.jpg') center"></p>
-      <p class="ImgList" style="background:url('../img/4.jpg') center"></p>
-      <p class="ImgList" style="background:url('../img/5.jpg') center"></p>
-      <p class="ImgList" style="background:url('../img/9.jpg') center"></p>
-      <!--轮播的按扭-->
-      <ul class="button">
-        <li><a class="hover" href="javascript:void(0);">●</a></li>
-        <li><a href="javascript:void(0);">●</a></li>
-        <li><a href="javascript:void(0);">●</a></li>
-        <li><a href="javascript:void(0);">●</a></li>
-        <li><a href="javascript:void(0);">●</a></li>
-        <li><a href="javascript:void(0);">●</a></li>
-      </ul>
+    <!--导航-->
+    <div class="nav">
+      <!--<img src="./img/logo.jpeg" alt="">-->
+      <div class="list list-inset">
+        <label class="item item-input">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="text" placeholder="Search">
+        </label>
+      </div>
     </div>
-    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
-    </script>
-    <script>
-      var _index=0;
-      var timePlay=null;
-      $("#container .ImgList").eq(0).show().siblings("div").hide();//只显示第一张
 
-      $("ul.button li").click(function(){
-        clearInterval(timePlay);
-        _index=$(this).index();
-        $("ul.button li .hover").removeClass('hover');
-        $(this).find('a').addClass("hover");
-        $("#container .ImgList").eq(_index).fadeIn().siblings("p").fadeOut();//淡出
-        autoPlay();
-      });
-      //自动轮播
-      function autoPlay(){
-        timePlay=setInterval(function(){
-          _index++;
-          if(_index<6){
-            if(_index==5){_index=-1; }
-            $("ul.button li .hover").removeClass('hover');
-            $("ul.button li").eq(_index).find('a').addClass("hover");
-            $("#container .ImgList").eq(_index).fadeIn().siblings("p").fadeOut();
-          }else{_index=-1;}
-        },2000);
-      };
-      autoPlay();//调用和执行
-    </script>
+  <!--轮播图-->
+    <ion-slide-box does-continue="true" auto-play="true" slide-interval="2000">
+      <ion-slide>
+        <div class="box blue"><a href="./Yolo/sop1.html"><img src="./img/1.jpg" alt=""></a></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box yellow"><a href="./Yolo/sop2.html"><img src="./img/3.jpg" alt=""></a></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box pink"><a href="./Yolo/sop3.html"><img src="./img/5.jpg" alt=""></a></div>5
+      </ion-slide>
+      <ion-slide>
+        <div class="box blue"><a href="./Yolo/sop4.html"><img src="./img/4.jpg" alt=""></a></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box yellow"><a href="./Yolo/sop5.html"><img src="./img/6.jpg" alt=""></a></div>
+      </ion-slide>
+      <ion-slide>
+        <div class="box pink"><a href="./Yolo/sop6.html"><img src="./img/2.jpg" alt=""></a></div>
+      </ion-slide>
+    </ion-slide-box>
+    <!---->
+
+    <!--分类展示-->
+    <div>
+
+    </div>
+    <!--上滑菜单-->
+    <!--<div ng-app="starter" ng-controller="articlePageCtrl">-->
+      <!--<button on-drag-up="onDragUp()" class="button">onDragUp</button>-->
+      <!--<button on-drag-down="onDragDown()" class="button">onDragDown</button>-->
+      <!--<button on-drag-right="onDragRight()" class="button">onDragRight</button>-->
+      <!--<button on-drag-left="onDragLeft()" class="button">onDragLeft</button>-->
+    <!--</div>-->
+    <!--<script type="text/javascript">-->
+      <!--angular.module('starter', ['ionic'])-->
+
+        <!--.run(function($ionicPlatform) {-->
+          <!--$ionicPlatform.ready(function() {-->
+            <!--// Hide the accessory bar by default (remove this to show the accessory bar above the keyboard-->
+            <!--// for form inputs)-->
+            <!--if(window.cordova && window.cordova.plugins.Keyboard) {-->
+              <!--cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);-->
+            <!--}-->
+            <!--if(window.StatusBar) {-->
+              <!--StatusBar.styleDefault();-->
+            <!--}-->
+          <!--});-->
+        <!--})-->
+
+        <!--.controller( 'actionsheetCtl',['$scope',function($scope){-->
+
+          <!--$scope.onDragUp=function(){-->
+            <!--console.log("onDragUp")-->
+          <!--}-->
+
+          <!--$scope.onDragDown=function(){-->
+            <!--console.log("onDragDown")-->
+          <!--}-->
+
+          <!--$scope.onDragRight=function(){-->
+            <!--console.log("onDragRight")-->
+          <!--}-->
+
+          <!--$scope.onDragLeft=function(){-->
+            <!--console.log("onDragLeft")-->
+          <!--}-->
+
+        <!--}])-->
+    <!--</script>-->
+
+
   </ion-content>
 </ion-view>
