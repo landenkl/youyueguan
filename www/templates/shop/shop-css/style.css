@@ -1,0 +1,163 @@
+/* Empty. Add your own CSS if you like */
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*古琴*/
+.tab-firstnav {
+  width: 100%;
+  margin:0 auto;
+}
+
+.tab-content1 {
+  width: 90%;
+  display: block;
+  margin:0 auto;
+  /*display: inline-block;*/
+  margin-top: 2%;
+}
+.tab-left img {
+  vertical-align: top;
+  width: 30%;
+  margin-left:10%;
+  /*margin-top: 50px;*/
+  border: 1px solid gray;
+}
+
+.tab-rightprice img{
+  width: 20px;
+  height: 20px;
+}
+
+.tab-left {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding:5% 0;
+  /*float: left;*/
+  /*padding-top: 50px;*/
+}
+
+.tab-right {
+  display: inline-block;
+  vertical-align: top;
+  margin-left:8%;
+}
+
+.tab-firstbox {
+  width: 80%;
+
+  border: 1px solid pink;
+  margin: 0 auto;
+}
+
+.tab-rightheader {
+  color: #111111;
+  font-weight: bolder;
+}
+
+.tab-rightprice {
+  font-weight: bolder;
+  color: red;
+}
+
+.tab-rightshop {
+  margin-top: 5px;
+}
+
+.tab-rightshop span:last-child{
+  color: #0c60ee;
+}
+/*古琴详情*/
+
+.tab-header {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tab-header img {
+  width:100%;
+  height: 20%;
+  border-bottom: 1px solid gray;
+}
+
+.icon {
+  /*color: #886aea;*/
+  margin-top: 2%;
+  text-align: center;
+}
+
+.tab-firstcontent {
+  /*text-align: center;*/
+  margin-left: 12%;
+}
+
+.tab-firstcontent span:first-child{
+  color: red;
+}
+
+.tab-firstcontent span:last-child{
+  border: 1px solid #ff3b30;
+}
+
+.tab-secondcontent {
+  margin-top: 10%;
+}
+
+.tab-secondcontent li {
+  display: inline-block;
+  /*float: left;*/
+  margin-left: 10%;
+}
+
+.tab-thirdcontent {
+  margin-left: 10%;
+  /*width: 100%;*/
+  margin-top: 10%;
+}
+
+.tab-thirdcontent li{
+  margin-top: 2%;
+  /*border-top: 1px solid gray;*/
+}
+
+.tab-thirdcontent li:first-child > a:first-child{
+  color: #ff3b30;
+  border: 1px solid #ff3b30;
+}
+
+.tab-thirdcontent li:first-child > a:last-child {
+  margin-left: 2%;
+  color: #111111;
+}
+
+.tab-secondfooter {
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.tab-secondfooter li {
+  display: inline-block;
+  margin-right: 2%;
+}
+
+.Afirst a {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  color: #ffffff;
+  background-color: #e6b500;
+  text-align: center;
+}
+
+.Asecond a {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  color: #ffffff;
+  background-color: #ff3b30;
+  text-align: center;
+}
