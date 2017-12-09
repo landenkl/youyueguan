@@ -1,1 +1,16 @@
 /* Empty. Add your own CSS if you like */
+.tao p{
+  font-size:22px;
+  line-height: 30px;
+}
+.tao span{
+  font-size: 20px;
+  color: #6c6c6c;
+  margin-left: 10px;
+}
+.sop2-one {
+  text-indent: 35px;
+  font-size: 22px;
+  line-height: 40px;
+  color: #69717d;
+}

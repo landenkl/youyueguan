@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html ng-app="ionicApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+  <title>淘购区</title>
+  <link href="https://cdn.bootcss.com/ionic/1.3.2/css/ionic.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://cdn.bootcss.com/ionic/1.3.2/js/ionic.bundle.min.js"></script>
+  <script src="../js/yu.js"></script>
+  <script type="text/javascript">
+    angular.module('ionicApp', ['ionic'])
+
+      .config(function($stateProvider, $urlRouterProvider) {
+
+        $stateProvider
+          .state('tabs', {
+            url: "/tab",
+            abstract: true,
+            templateUrl: "templates/tabs.html"
+          })
+          .state('tabs.home', {
+            url: "/home",
+            views: {
+              'home-tab': {
+                templateUrl: "templates/home.html",
+                controller: 'HomeTabCtrl'
+              }
+            }
+          })
+          .state('tabs.facts', {
+            url: "/facts",
+            views: {
+              'home-tab': {
+                templateUrl: "templates/facts.html"
+              }
+            }
+          })
+          .state('tabs.facts2', {
+            url: "/facts2",
+            views: {
+              'home-tab': {
+                templateUrl: "templates/facts2.html"
+              }
+            }
+          })
+          .state('tabs.about', {
+            url: "/about",
+            views: {
+              'about-tab': {
+                templateUrl: "templates/about.html"
+              }
+            }
+          })
+          .state('tabs.navstack', {
+            url: "/navstack",
+            views: {
+              'about-tab': {
+                templateUrl: "templates/nav-stack.html"
+              }
+            }
+          })
+          .state('tabs.contact', {
+            url: "/contact",
+            views: {
+              'contact-tab': {
+                templateUrl: "templates/contact.html"
+              }
+            }
+          });
+
+
+        $urlRouterProvider.otherwise("/tab/home");
+
+      })
+
+      .controller('HomeTabCtrl', function($scope) {
+        console.log('HomeTabCtrl');
+      });
+  </script>
+</head>
+
+<body>
+
+<ion-nav-bar class="bar-positive">
+  <ion-nav-back-button>
+  </ion-nav-back-button>
+</ion-nav-bar>
+
+<ion-nav-view></ion-nav-view>
+
+
+<script id="templates/tabs.html" type="text/ng-template">
+  <ion-tabs class="tabs-icon-top tabs-positive">
+
+    <ion-tab title="Home" icon="ion-home" href="#/tab/home">
+      <ion-nav-view name="home-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="About" icon="ion-ios-information" href="#/tab/about">
+      <ion-nav-view name="about-tab"></ion-nav-view>
+    </ion-tab>
+
+    <ion-tab title="Contact" icon="ion-ios-world" ui-sref="tabs.contact">
+      <ion-nav-view name="contact-tab"></ion-nav-view>
+    </ion-tab>
+
+  </ion-tabs>
+</script>
+
+
+<!--*****-->
+<script id="templates/home.html" type="text/ng-template">
+  <ion-view view-title="淘宝区">
+    <ion-content class="padding">
+      <div class="div1" style="margin-bottom: 130px;text-align: center">
+        <img src="../img/71.jpg" alt="" style="width:70%;">
+        <p style="font-size: 16px;margin: 40px 0 20px 0;">爱尔因小提琴手工实木初学入门小提琴</p>
+        <span style="border:1px solid #6f00d2;font-size: 16px;">活动价</span>
+        <span style="font-size: 20px;color: red;margin: 0 30px 0 10px;">￥521</span>
+        <span style="border:1px solid #6c6c6c;font-size: 16px;margin: 0 10px;">原价</span>
+        <span style="font-size: 18px;color: #6c6c6c;"><s>￥599</s></span>
+
+        <div class="tao" style="text-align: left;margin:30px 0 0 15%;">
+          <p>商品信息 :</p>
+          <p>品牌:<span>爱尔因</span></p>
+          <p>琴身配件:<span>乌木配件</span></p>
+          <p>琴弦配件:<span>铝锳合金琴弦</span></p>
+          <p>琴码:<span>原装琴码</span></p>
+          <p>面板材质:<span>精选俄罗斯鱼鳞云杉</span></p>
+          <p>背板材质:<span>精选四川枫木</span></p></div>
+      </div>
+      <p>
+        <a class="button icon icon-right ion-chevron-right" href="#/tab/facts">Scientific Facts</a>
+      </p>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script id="templates/facts.html" type="text/ng-template">
+  <ion-view view-title="Facts">
+    <ion-content class="padding" style="line-height: 52px;font-size: 1em;text-indent: 40px;color: indianred;">
+      <p>因为拉小提琴能使孩子的左右手齐动，把手、眼、脑同时调动起来，能开发左右脑的思维；拉琴过程中孩子的眼睛要不停地扫射乐谱，这对他们的
+        注意力也是很好的锻炼；而孩子把理性的音符转化为声音，是一种可感的情绪表达，能逐渐学会审美、陶冶情操、培养气质，使孩子成为一个感情丰
+        富的人，一个有品位的人；由爱艺术而爱生活、爱创造、健全人格</p>
+      <p>
+        <a class="button icon ion-home" href="#/tab/home"> Home</a>
+        <a class="button icon icon-right ion-chevron-right" href="#/tab/facts2" >了解更多</a>
+      </p>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script id="templates/facts2.html" type="text/ng-template">
+  <ion-view view-title="Also Factual">
+    <ion-content class="padding">
+      <p class="sop2-one">音乐能给人以智力开发：音乐的力量真太神奇了,如果不是亲身体验, 真的无法相信,从十月怀胎到呱呱落地到今日三岁,从不间
+        断让孩子聆听古典音乐,孩子在每个阶段都有出人意料的表现,6个月会说2个字,3个字的词语……零到三岁,人的听觉神经发展到60%--80%,所以三岁之内
+        要听尽世界有名的音乐,只要听一,二遍,终生不忘,深入到他的心灵深处..一个人从胎儿中三个月到五个月就有听觉,要用最有音乐内涵的音乐,真正的音
+        乐,古典音乐,中国有古典音乐,西方也有,为什么叫古典音乐,因为他是经典之作,所以流传千古,叫古典,并不是他时代很古老,那是古董,不是古典,.如果
+        你的孩子超过三岁,大脑还有20%如果你的孩子超过六岁,13岁以下,剩下10%的机会如果你孩子超过13岁,直觉的能力就消失了,深度学习的样子习惯没有了.
+        让一个孩子三岁前看尽世界名画,只要图片就可以了孩子不要再问他懂不懂,现在学习,每年都有他的懂,以至于懂一辈子。 数理化要懂不懂，但音乐不需要
+        懂不懂,美术需不要懂不懂。如果我一边教音乐一边告诉他音乐知识不是很好吗,他有鉴赏音乐的能力,他听过百首世界名曲,他要知道音乐的这些理论,等到
+        他十八岁,二个星期统统学完了,你急什么?知识是最简单的事,心灵才是最难的事。</p>
+      <p class="sop2-one">高素质人才培养：我国著名科学家。地质部长李四光先生，就是一位在小提琴领域很有造旨行家。在中国的音乐史料记载他创作的
+        《行路难》是中国发现的最早的由中国人创作的第一部小提琴乐曲。我国著名科学家。水稻专家袁隆平会拉小提琴爱因斯坦会拉小提琴-----。他常常为某
+        些数字的公式，科学难题而苦脑。一次他从楼上下来大堂拉琴，完后，又上楼了，几天不出来。突然一天下来后，他高兴的夹了一叠纸大声说，“广义相对论”。
+        他每天都拉小提琴。爱因斯坦说：“这个世界可以有音乐的音符组成，也可以由数字的公式组成，音符和数字公式，才是真正完整的世界”才是我的科学成就。
+        美国经济奇才，经济学家。格林斯潘曾在美国朱利亚音乐学院毕业。你信吗？李岚清说“音乐的魅力，能使学习更有实效，思维更有创意，工作更有效益领导
+        更有艺术，生活更有情趣，人生更加丰厚。</p>
+      <p class="sop2-one">音乐修养，学习能力的培养（古典音乐）
+        加利福利亚大学 劳尔教授的实验表明，古典音乐对学生的智商提高有明显的效果。
+        我国教育部“十五”规划重点课题组研究发现：特定的古典音乐对培养孩子学习能力有显著影响。
+        学习能力与音乐修养是早期教育的重要内容。
+        学习能力的重要性；大部分幼儿圆及小学的孩子存在注意力不集中的问题，小学三四年级以后一部分孩子学习成绩下降。以上问题都是视学习能力的结果.
+        音乐修养的重要性: 高素质人才=音乐修养+学习能力
+        注意力方面：在注意力的广度稳定性，分配和转移品质四个方面影响效率达87%，在儿童常见的注意力障碍改善方面有效率达71%
+        语言能力方面：经过一年的音乐刺激语言能力较原来同等能力的孩子超出72%
+        记忆力方面：控制组的孩子平均对照组的孩子记忆力速度快412%。而记忆保持的时间长796% 记忆力和表达能力强,悟性高,耐里和专注里力超好,
+        想象创造力方面：被试组的孩子在直觉思维方面搞出同龄孩子127%
+        如何培养  的音乐修养和学习能力</p>
+
+      <a class="button icon ion-home" href="#/tab/home"> Home</a>
+        <a class="button icon ion-chevron-left" href="#/tab/facts">返回上一页</a>
+      </p>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script id="templates/about.html" type="text/ng-template">
+  <ion-view view-title="About">
+    <ion-content class="padding">
+      <h3>Create hybrid mobile apps with the web technologies you love.</h3>
+      <p>Free and open source, Ionic offers a library of mobile-optimized HTML, CSS and JS components for building highly interactive apps.</p>
+      <p>Built with Sass and optimized for AngularJS.</p>
+      <p>
+        <a class="button icon icon-right ion-chevron-right" href="#/tab/navstack">Tabs Nav Stack</a>
+      </p>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script id="templates/nav-stack.html" type="text/ng-template">
+  <ion-view view-title="Tab Nav Stack">
+    <ion-content class="padding">
+      <p><img src="http://ionicframework.com/img/diagrams/tabs-nav-stack.png" style="width:100%"></p>
+    </ion-content>
+  </ion-view>
+</script>
+
+<script id="templates/contact.html" type="text/ng-template">
+  <ion-view title="Contact">
+    <ion-content>
+      <div class="list">
+        <div class="item">
+          @IonicFramework
+        </div>
+        <div class="item">
+          @DriftyTeam
+        </div>
+      </div>
+    </ion-content>
+  </ion-view>
+</script>
+
+</body>
+</html>
