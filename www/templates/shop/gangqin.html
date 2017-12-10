@@ -7,20 +7,20 @@
           <h4>精美古琴</h4>
           <div></div>
         </div>
-        <div class="tab-content1">
+        <div class="tab-content1" ng-repeat="x in shopguqin">
           <div class="tab-firstbox">
             <div class="tab-left">
-              <a href="#/tab/nextshop"><img src="../img/qin.jpg" alt="">
+              <a href="#/tab/nextshop/{{x.id}}/shopguqin"><img ng-src="{{x.pho}}" alt="">
               <div class="tab-right">
                 <div class="tab-rightheader">
-                  精美古琴
+                  {{x.til}}
                 </div>
                 <div class="tab-rightprice">
-                  <span>￥8888</span>
-                  <img src="../img/shopcar.jpg" alt="">
+                  <span>{{x.yuna}}</span>
+                  <img ng-src="{{x.carimg}}" alt="">
                 </div>
                 <div class="tab-rightshop">
-                  <span>沉香琴苑</span>
+                  <span>{{x.dianpu}}</span>
                   <span>进店></span>
                 </div>
               </div>
@@ -32,23 +32,23 @@
           <h4>优质钢琴</h4>
           <div></div>
         </div>
-        <div class="tab-content1">
+        <div class="tab-content1" ng-repeat="x in shopgq">
           <div class="tab-firstbox">
             <div class="tab-left">
-              <a href="#/tab/nextshop"><img src="../img/qin.jpg" alt="">
-              <div class="tab-right">
-                <div class="tab-rightheader">
-                  精美古琴
+              <a href="#/tab/nextshop/{{x.id}}/shopgq"><img ng-src="{{x.pho}}" alt="">
+                <div class="tab-right">
+                  <div class="tab-rightheader">
+                    {{x.til}}
+                  </div>
+                  <div class="tab-rightprice">
+                    <span>{{x.yuna}}</span>
+                    <img ng-src="{{x.carimg}}" alt="">
+                  </div>
+                  <div class="tab-rightshop">
+                    <span>{{x.dianpu}}</span>
+                    <span>进店></span>
+                  </div>
                 </div>
-                <div class="tab-rightprice">
-                  <span>￥8888</span>
-                  <img src="../img/shopcar.jpg" alt="">
-                </div>
-                <div class="tab-rightshop">
-                  <span>沉香琴苑</span>
-                  <span>进店></span>
-                </div>
-              </div>
               </a>
             </div>
           </div>
@@ -57,23 +57,23 @@
           <h4>优雅提琴</h4>
           <div></div>
         </div>
-        <div class="tab-content1">
+        <div class="tab-content1" ng-repeat="x in shoptq">
           <div class="tab-firstbox">
             <div class="tab-left">
-              <a href="#/tab/nextshop"><img src="../img/qin.jpg" alt="">
-              <div class="tab-right">
-                <div class="tab-rightheader">
-                  精美古琴
+              <a href="#/tab/nextshop/{{x.id}}/shoptq"><img ng-src="{{x.pho}}" alt="">
+                <div class="tab-right">
+                  <div class="tab-rightheader">
+                    {{x.til}}
+                  </div>
+                  <div class="tab-rightprice">
+                    <span>{{x.yuna}}</span>
+                    <img ng-src="{{x.carimg}}" alt="">
+                  </div>
+                  <div class="tab-rightshop">
+                    <span>{{x.dianpu}}</span>
+                    <span>进店></span>
+                  </div>
                 </div>
-                <div class="tab-rightprice">
-                  <span>￥8888</span>
-                  <img src="../img/shopcar.jpg" alt="">
-                </div>
-                <div class="tab-rightshop">
-                  <span>沉香琴苑</span>
-                  <span>进店></span>
-                </div>
-              </div>
               </a>
             </div>
           </div>

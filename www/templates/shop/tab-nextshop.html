@@ -1,14 +1,14 @@
-<<ion-view view-title="古琴详情">
+<<ion-view view-title="{{data.name}}详情">
   <ion-content>
 
     <div class="tab-secondbox">
       <div class="tab-header">
-        <img src="../img/guqin1.jpg" alt="">
-        <p class="icon ion-cube">精美古琴，价格便宜，质量上乘，采用顶级大师技艺制作，音感极好，是爱琴人士的不二之选</p>
+        <img ng-src="{{data.pho}}" alt="">
+        <p class="icon ion-cube">{{data.jianjie}}</p>
       </div>
       <div class="tab-firstcontent">
-        <span>￥8888</span>
-        <span>精美古典</span>
+        <span>{{data.yuan}}</span>
+        <span>{{data.til}}</span>
       </div>
       <ul class="tab-secondcontent">
         <a href=""><li class="ion-ios-checkmark-outline">极速送货</li></a>
