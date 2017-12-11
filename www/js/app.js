@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','liudeng'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','liudeng','frients.controllers'])
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -60,51 +60,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','l
           }
         }
       })
-      .state('tab.frients', {// /tab/frients
-        url: '/frients',
-        views: {
-          'tab-frients': {
-            templateUrl: 'templates/tab-frients.html',
-            controller: 'FrientsCtrl'
-          }
-        }
-      })
-      .state('tab.frients.hot', {
-        url: '/hot',
-        views: {
-          'tab-frients-child': {
-            templateUrl: 'templates/frients/hot.html',
-            controller: 'HotCtrl'
-          }
-        }
-      })
-      .state('tab.frients.vidos', {
-        url: '/vidos',
-        views: {
-          'tab-frients-child': {
-            templateUrl: 'templates/frients/vidos.html',
-            controller: 'VidosCtrl'
-          }
-        }
-      })
-      .state('tab.frients.story', {
-        url: '/story',
-        views: {
-          'tab-frients-child': {
-            templateUrl: 'templates/frients/story.html',
-            controller: 'StoryCtrl'
-          }
-        }
-      })
-      .state('tab.search', {
-        url: '/search/:name',
-        views: {
-          'tab-frients': {
-            templateUrl: 'templates/frients/search.html',
-            controller: 'FoundCtrl'
-          }
-        }
-      })
+
       .state('tab.account', {
         url: '/account',
         views: {

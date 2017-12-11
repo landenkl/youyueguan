@@ -1,17 +1,13 @@
 <ion-view view-title="" hide-back-button="true">
-  <ion-nav-buttons side="left">
-    <ul class="nav nav-pills">
-      <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-      <li class="active"><a href="#/tab/frients/hot">关注</a></li>
-      <li><a href="#/tab/search/{{name}}">发现</a></li>
-    </ul>
-  </ion-nav-buttons>
-  <ion-nav-buttons side="right">
-    <ul class="nav nav-pills">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
-    </ul>
-  </ion-nav-buttons>
-  <ion-content>
-    story.html
+  <ion-content style="margin-top: -10%;">
+    <ion-list>
+      <a href="#/tab/frients/hot" class="btn btn-default btn-sm active"> 返回</a>
+    <ion-item ng-repeat="p in story" ng-href="#/tab/frients/gus/{{p.id}}">
+      <h2>{{p.name}}</h2>
+      <p>{{p.desc}}</p>
+      <img ng-src="{{p.porster}}" style="width: 100%;">
+    </ion-item>
+      <div style="margin-top: 18%;width: 100%;height: 10px;"></div>
+  </ion-list>
   </ion-content>
 </ion-view>

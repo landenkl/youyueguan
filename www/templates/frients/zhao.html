@@ -1,0 +1,19 @@
+
+    <ion-list>
+      <a href="#/tab/frients/hot" class="btn btn-default btn-sm active" style="margin-top: 5%;margin-bottom:5%;"> 返回</a>
+      <ion-item>
+        <span class="glyphicon glyphicon-search" style="font-size: 20px;"></span>
+        <input type="text" placeholder="Username" style="display: inline-block; border-bottom: 2px solid black;width:60%;">
+        <a href="" class="btn btn-default btn-ml active"> 搜索</a>
+        <p style="margin-top: 5%;">热门搜素</p>
+      </ion-item>
+
+      <ion-item ng-repeat="p in zhao " ng-href="#/tab/zhaos/{{p.id}}">
+          <h3>{{p.name}}</h3>
+      </ion-item>
+    </ion-list>
+
+
+
+
+

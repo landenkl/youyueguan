@@ -1,32 +1,20 @@
-<ion-view view-title="">
+<ion-view view-title="" hide-back-button="true">
   <ion-nav-buttons side="left">
     <ul class="nav nav-pills">
-      <li role="presentation" ><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-      <li role="presentation" ><a href="#/tab/frients">关注</a></li>
-      <li role="presentation" class="active"><a href="#/tab/search/{{name}}">发现</a></li>
+      <li role="presentation" ><a href="#/tab/zhao"><span class="glyphicon glyphicon-search"></span></a></li>
+      <li role="presentation" ><a href="#/tab/frients/hot">关注</a></li>
+      <li role="presentation" class="active"><a href="#/tab/search">发现</a></li>
     </ul>
   </ion-nav-buttons>
   <ion-nav-buttons side="right">
     <ul class="nav nav-pills">
-      <li role="presentation"><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+      <li role="presentation"><a href="#/tab/end"><span class="glyphicon glyphicon-user"></span></a></li>
     </ul>
   </ion-nav-buttons>
-  <ion-content class="padding">
-    <!--<div class="container">-->
-      <!--<div class="row" style="text-align:center;">-->
-        <!--<div class="col-xs-4"><a href="">热榜</a></div>-->
-        <!--<div class="col-xs-4"><a href="">视频</a></div>-->
-        <!--<div class="col-xs-4"><a href="">故事</a></div>-->
-      <!--</div>-->
-    <!--</div>-->
+  <ion-content>
+    <div><a href="#/tab/frients/hot" class="btn btn-default btn-sm active">返回</a></div>
 
-    <ion-list>
-
-      <!--<ion-item ng-repeat="p in search" href="#">-->
-        <!--<img ng-src="{{p.porster}}" style="width: 120px;height: 80px;">-->
-        <!--<h2>{{p.name}}</h2>-->
-        <!--<p>{{p.desc}}</p>-->
-      <!--</ion-item>-->
-    </ion-list>
   </ion-content>
+
+
 </ion-view>

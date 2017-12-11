@@ -1,25 +1,29 @@
+
 <ion-view>
+  <ion-nav-bar>
   <ion-nav-buttons side="left">
     <ul class="nav nav-pills">
-      <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      <li><a href="#/tab/zhao"><span class="glyphicon glyphicon-search"></span></a></li>
       <li class="active"><a href="#/tab/frients/hot">关注</a></li>
-      <li><a href="#/tab/search/{{name}}">发现</a></li>
+      <li><a href="#/tab/search">发现</a></li>
     </ul>
   </ion-nav-buttons>
   <ion-nav-buttons side="right">
     <ul class="nav nav-pills">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+      <li><a href="#/tab/end"><span class="glyphicon glyphicon-user"></span></a></li>
     </ul>
   </ion-nav-buttons>
-  <ion-content class="padding">
-    <div class="container">
-      <div class="row" style="text-align:right;">
+
+    <div class="container" style="margin-top: 13%;">
+     <div class="row" style="text-align:right;">
         <div class="col-xs-4"><a href="#/tab/frients/hot" class="btn btn-default btn-sm active">热榜</a></div>
         <div class="col-xs-4"><a href="#/tab/frients/vidos" class="btn btn-default btn-sm active">视频</a></div>
         <div class="col-xs-4"><a href="#/tab/frients/story" class="btn btn-default btn-sm active">故事</a></div>
       </div>
     </div>
-    <ion-nav-view name="tab-frients-child"></ion-nav-view>
-  </ion-content>
-</ion-view>
+
+  </ion-nav-bar>
+  <ion-nav-view name="tab-frients-child"></ion-nav-view>
+
+  </ion-view>
 
