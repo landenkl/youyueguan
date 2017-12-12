@@ -1,0 +1,33 @@
+<ion-view view-title="优质钢琴">
+  <ion-content class="tab-firstnav">
+    <style>
+      h3 {
+        margin: 15px auto 20px;
+        text-align: center;
+        color: #0a9dc7;
+      }
+    </style>
+    <h3>钢琴优乐馆</h3>
+    <div class="tab-content1" ng-repeat="x in shopgq2">
+      <div class="tab-firstbox">
+        <div class="tab-left">
+          <a href="#/tab/nextshop/{{x.id}}/shopgq"><img ng-src="{{x.pho}}" alt="">
+            <div class="tab-right">
+              <div class="tab-rightheader">
+                {{x.til}}
+              </div>
+              <div class="tab-rightprice">
+                <span>{{x.yuna}}</span>
+                <img ng-src="{{x.carimg}}" alt="">
+              </div>
+              <div class="tab-rightshop">
+                <span>{{x.dianpu}}</span>
+                <span>进店></span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

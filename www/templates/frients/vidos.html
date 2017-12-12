@@ -1,0 +1,45 @@
+<ion-view view-title="" hide-back-button="true">
+  <ion-content style="margin-top: -10%;">
+    <ion-list>
+      <a href="#/tab/frients/hot" class="btn btn-default btn-sm active"> 返回</a>
+      <h4>中国古琴</h4>
+      <video src="http://www.youname.com/images/123456.mp4" style="width: 100%;height: 20%;" controls="controls"></video>
+      <ion-item ng-repeat="p in products" ng-href="#/tab/frients/gu/{{p.id}}">
+
+        <img ng-src="{{p.porster}}" style="width: 120px;height: 80px;vertical-align: bottom;" controls="controls">
+        <div style="display: inline-block;">
+          <h2>{{p.name}}</h2>
+          <p>{{p.desc}}</p>
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <h4>流行钢琴</h4>
+      <video src="http://www.youname.com/images/123456.mp4" style="width: 100%;height: 20%;" controls="controls"></video>
+      <ion-item ng-repeat="p in pdio" ng-href="#/tab/frients/gang/{{p.id}}">
+
+        <img ng-src="{{p.porster}}" style="width: 120px;height: 80px;vertical-align: bottom;">
+        <div style="display: inline-block;">
+          <h2>{{p.name}}</h2>
+          <p>{{p.desc}}</p>
+        </div>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <h4>小提琴</h4>
+      <video src="http://www.youname.com/images/123456.mp4" style="width: 100%;height: 20%;" controls="controls"></video>
+      <ion-item ng-repeat="p in head" ng-href="#/tab/frients/xiao/{{p.id}}">
+
+        <img ng-src="{{p.porster}}" style="width: 120px;height: 80px;vertical-align: bottom;">
+        <div style="display: inline-block;">
+          <h2>{{p.name}}</h2>
+          <p>{{p.desc}}</p>
+        </div>
+      </ion-item>
+      <div style="margin-top: 18%;width: 100%;height: 10px;"></div>
+    </ion-list>
+  </ion-content>
+
+
+</ion-view>
+
