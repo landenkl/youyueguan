@@ -140,6 +140,7 @@
 .tab-secondfooter li {
   display: inline-block;
   margin-right: 2%;
+
 }
 
 .Afirst a {
@@ -147,6 +148,7 @@
   width: 80px;
   height: 30px;
   line-height: 30px;
+  margin-right:10px;
   color: #ffffff;
   background-color: #e6b500;
   text-align: center;
@@ -154,10 +156,91 @@
 
 .Asecond a {
   display: inline-block;
-  width: 80px;
-  height: 30px;
+  width: 30px;
   line-height: 30px;
-  color: #ffffff;
-  background-color: #ff3b30;
+  height: 30px;
+  font-size: 30px;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  color: dimgrey;
+}
+.shop-mengban {
+  width: 100%;
+  height:100%;
+  background-color: rgba(0,0,0,.5);
+  position: fixed;
+  top:110%;
+  /*top:0%;*/
+  transition: top 0.5s;
+}
+.mengban-one {
+  margin-top:35%;
+  background-color: #fff;
+  height:82%;
+  overflow: hidden;
+
+}
+.mengban-one>p{
+  font-size: 20px;
   text-align: center;
+  width:100%;
+  margin-top:10px;
+}
+.shop-juan {
+  width: 80%;
+  font-size: 0;
+  height: 85px;
+  background-color: darkorange;
+  color: #fff;
+  margin:20px auto 0;
+}
+.juan-left {
+  display: inline-block;
+  width: 65%;
+  margin-left:4%;
+  font-size: 14px;
+}
+.juan-left .qian {
+  margin-bottom: 10px;
+  margin-top:5px;
+}
+.juan-left .qian>span {
+  font-weight: bolder;
+  font-size: 18px;
+}
+.juan-left>p{
+  margin: 0;
+  padding: 0;
+}
+.juan-right {
+  display: inline-block;
+  width:24%;
+  vertical-align: top;
+  height: 100%;
+
+}
+.juan-right p{
+  line-height: 80px;
+  height: 90%;
+  border-left: 1px dashed #fff;
+  margin: 0;
+  margin-top: 5%;
+  position: relative;
+  padding-left:20%;
+  font-size: 14px;
+  font-weight: bolder;
+}
+.shop-mengban>span{
+  display: inline-block;
+  position: fixed;
+  bottom:0px;
+  display: none;
+  width: 110%;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  background-color: crimson;
 }

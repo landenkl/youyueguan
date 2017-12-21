@@ -8,52 +8,32 @@ angular.module('liudeng', ['shop.controllers'])
         views: {
           'tab-chats': {
             templateUrl: 'templates/shop/shop-gangqin.html',
-            controller: 'gangqinCtrl'
+            controller: 'ChatsCtrl'
           }
         }
       })
-      // .state('tab.nextshop/:2', {
-      //   url: '/nextshop/:2',
-      //   views: {
-      //     'tab-chats': {
-      //       templateUrl: 'templates/shop/tab-nextshop.html',
-      //       controller: 'gangqinCtrl'
-      //     }
-      //   }
-      // })
-
       //提琴
       .state('tab.tiqin', {
         url: '/tiqin',
         views: {
           'tab-chats': {
             templateUrl: 'templates/shop/shop-tiqin.html',
-            controller: 'tiqinCtrl'
+            controller: 'ChatsCtrl'
           }
         }
       })
-      // .state('tab.nextshop/:3', {
-      //   url: '/nextshop/:3',
-      //   views: {
-      //     'tab-chats': {
-      //       templateUrl: 'templates/shop/tab-nextshop.html',
-      //       controller: 'tiqinCtrl'
-      //     }
-      //   }
-      // })
-
       //古琴
       .state('tab.guqin', {
         url: '/guqin',
         views: {
           'tab-chats': {
             templateUrl: 'templates/shop/tab-guqin.html',
-            controller: 'guqinCtrl'
+            controller: 'ChatsCtrl'
           }
         }
       })
 
-      //
+      //详情
       .state('tab.nextshop', {
         url: '/nextshop/:id/:name',
         views: {
@@ -63,17 +43,4 @@ angular.module('liudeng', ['shop.controllers'])
           }
         }
       })
-
-      //精选
-      .state('tab.chats.jingxun', {
-        url: '/jingxun',
-        views: {
-          'tab-shop-jingxuan': {
-            templateUrl: 'templates/shop/gangqin.html',
-            controller: 'shopCtrl'
-          }
-        }
-      })
-
-
   });

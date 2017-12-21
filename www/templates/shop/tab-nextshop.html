@@ -1,6 +1,5 @@
 <<ion-view view-title="{{data.name}}详情">
   <ion-content>
-
     <div class="tab-secondbox">
       <div class="tab-header">
         <img ng-src="{{data.pho}}" alt="">
@@ -18,8 +17,8 @@
       </ul>
       <ul class="tab-thirdcontent">
         <li class="ion-android-map">
-          <a href=""><span>店铺优惠卷</span></a>
-          <a href=""><span>领取优惠券</span></a>
+          <span>店铺优惠卷</span>
+          <span>领取优惠券</span>
         </li>
         <li class="ion-android-map">
           <a href=""><span>积分</span></a>
@@ -38,10 +37,43 @@
           <a href="">加入购物车</a>
         </li>
         <li class="Asecond">
-          <a href="">立即购买</a>
+          <a class="ion-android-cart"></a>
         </li>
       </ul>
     </div>
+    <div class="shop-mengban">
+      <div class="mengban-one">
+        <p>店铺优惠券</p>
+        <div class="shop-juan">
+          <div class="juan-left">
+            <p class="qian">￥<span>10</span></p>
+            <p>满500使用</p>
+            <p>有效期：2天</p>
+          </div>
+          <div class="juan-right">
+            <p>立即领取</p>
+          </div>
+        </div>
+      </div>
+      <span class="quan-success">完成</span>
+    </div>
+    <script>
+      var mengban = document.getElementsByClassName('shop-mengban');
+      var quan = document.getElementsByClassName('ion-android-map');
+      var shopSucs = document.getElementsByClassName('quan-success');
+      var lingqu = document.getElementsByClassName('juan-right');
 
+      quan[0].onclick = function () {
+        mengban[0].style.top = '0';
+        shopSucs[0].style.display = 'inline-block'
+      }
+      lingqu[0].onclick = function () {
+        alert('领取成功');
+      }
+      shopSucs[0].onclick = function () {
+        mengban[0].style.top = '110%';
+        shopSucs[0].style.display = 'none'
+      }
+    </script>
   </ion-content>
 </ion-view>
